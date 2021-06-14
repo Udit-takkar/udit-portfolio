@@ -1,33 +1,8 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-.test {
-  font-size: 200px;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
 .pagecontainer {
   min-height: 100vh;
   padding-left: 4;
   padding-right: 4;
   margin: 0 auto;
-  background-color: #343c7a;
 }
 
 .dots {
@@ -59,4 +34,9 @@ a {
     linear-gradient(to right, transparent 20%, black 80%);
   mask-composite: exclude;
   -webkit-mask-composite: source-in;
+}
+
+.test {
+  font-size: 3px;
+  z-index: 3;
 }
