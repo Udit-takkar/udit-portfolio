@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
 
 html,
 body {
@@ -21,13 +22,15 @@ a {
 
 * {
   box-sizing: border-box;
+  color: white;
+  font-family: "Muli";
 }
 .pagecontainer {
   min-height: 100vh;
   padding-left: 4;
   padding-right: 4;
   margin: 0 auto;
-  background-color: #343c7a;
+  /* background-color: #343c7a; */
 }
 
 .dots {
@@ -37,6 +40,7 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 5;
   background-image: url("../assets/dot-bg.svg");
   mix-blend-mode: overlay;
   mask-image: linear-gradient(to top, transparent 5%, black 95%),
@@ -52,6 +56,7 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 5;
   background-image: url("../assets/hero.svg");
   background-size: cover;
   mix-blend-mode: overlay;
@@ -59,4 +64,15 @@ a {
     linear-gradient(to right, transparent 20%, black 80%);
   mask-composite: exclude;
   -webkit-mask-composite: source-in;
+}
+.hero_children {
+  max-width: 49rem;
+}
+.hero_intro {
+  font-family: "Source Code Pro", monospace;
+}
+
+.hero_teaser {
+  max-width: 35rem;
+
 }

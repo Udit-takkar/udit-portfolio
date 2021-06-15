@@ -11,17 +11,17 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className=" flex items-center flex-wrap bg-transparent p-3 ">
+      <nav className="font-muli absolute w-full flex items-center flex-wrap bg-transparent z-10 p-5 ">
         <Link href="/">
           <a className="inline-flex items-center p-2 mr-4 ">
-            <span className="text-xl text-white font-bold uppercase tracking-wide">
+            <span className="text-xl text-teaser font-bold  tracking-wide">
               Udit Takkar
             </span>
           </a>
         </Link>
         <button
           onClick={handleClick}
-          className=" inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none"
+          className=" inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-accent outline-none"
         >
           <svg
             className="w-6 h-6"
@@ -45,22 +45,22 @@ export const Navbar = () => {
         >
           <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
             <Link href="/">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white ">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-accent hover:text-white ">
                 Home
               </a>
             </Link>
             <Link href="/">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-accent hover:text-white">
                 Projects
               </a>
             </Link>
             <Link href="/">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-accent hover:text-white">
                 About me
               </a>
             </Link>
             <Link href="/">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-accent hover:text-white">
                 Contact me
               </a>
             </Link>
