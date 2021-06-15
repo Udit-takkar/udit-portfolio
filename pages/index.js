@@ -10,7 +10,7 @@ import "tailwindcss/tailwind.css";
 import { Navbar } from "../components/Navbar";
 import Hero from "../containers/Hero";
 import Link from "next/link";
-
+import profilePicture from "../assets/udit_dp_june_2021.png";
 // import GitHubButton from "react-github-btn";
 
 function Home() {
@@ -55,11 +55,40 @@ function Home() {
             Projects
           </h1>
         </section>
-        <section className="About Me mt-20">
+        {/* --------------------------ABout Me ------------------------------------------- */}
+        <section className="About_Me mt-20">
           <h1 className="projects__section_title whitespace-nowrap flex text-white text-4xl font-bold mb-20 items-center ">
             About Me
           </h1>
+          <div className="About_Me__content flex justify-center items-center		">
+            <img
+              src={profilePicture}
+              inline-block
+              className="picture inline-block"
+              alt="profile-pic"
+            />
+            <div className="About_Me__content-text ml-8 text-teaser text-muli text-xl text-base">
+              Hello! I'm Udit Takkar, a Web Developer based in New delhi, India
+              with a love and passion for building products using the latest web
+              technologies.
+              <br />
+              <br />I am currently pursuing B.Tech in CSE from Maharaja Agrasen
+              institute of Technology(MAIT) '23.
+              <br />
+              <br />
+              Here are a few technologies I work with
+              <ul className="grid grid-cols-2">
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>React.js & Redux</li>
+                <li>MongoDB & Mongoose</li>
+                <li>Node.js</li>
+                <li>Express</li>
+              </ul>
+            </div>
+          </div>
         </section>
+        {/* --------------------------Contact Section ------------------------------------------- */}
         <section className="Contact mt-20">
           <h1 className="projects__section_title whitespace-nowrap flex text-white text-4xl font-bold mb-5 items-center ">
             Get in Touch
@@ -70,6 +99,7 @@ function Home() {
             a recruiter or to simply drop for a chat <br />
             Want me to work on your project or your team ? <br />
           </div>
+
           <div className="contact__social-btns mt-8 flex justify-center w-full">
             <Link href="https://www.linkedin.com/in/udit-takkar-5457a1187/">
               <a className=" social-btn hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">

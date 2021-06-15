@@ -101,3 +101,12 @@ a {
 .social-btn {
   margin-left: 2rem;
 }
+
+.picture {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+
+  object-fit: cover;
+}
