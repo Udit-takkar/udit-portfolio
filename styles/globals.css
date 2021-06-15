@@ -30,6 +30,7 @@ a {
   padding-left: 4;
   padding-right: 4;
   margin: 0 auto;
+  overflow-y: auto;
   /* background-color: #343c7a; */
 }
 
@@ -74,5 +75,29 @@ a {
 
 .hero_teaser {
   max-width: 35rem;
+}
+.projects__section_title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-left: 1rem;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  flex-grow: 1;
+  /* transform: translate(-100%); */
 
+  /* min-width: 20rem; */
+}
+.projects__section_title::before {
+  content: "★";
+  margin-right: 1.5rem;
+  /* font-family: monospace; */
+  color: #ffcc68;
+  font-size: 20px;
+  position: relative;
+}
+
+.social-btn {
+  margin-left: 2rem;
 }
