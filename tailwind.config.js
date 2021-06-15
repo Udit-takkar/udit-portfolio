@@ -21,6 +21,7 @@ module.exports = {
       teaser: "#ADB2DC",
       accent: "#FFCC68",
       background: "#22264A",
+      cardBorder:"#282E5E"
     },
     extend: {
       fontFamily: {

@@ -11,6 +11,9 @@ import { Navbar } from "../components/Navbar";
 import Hero from "../containers/Hero";
 import Link from "next/link";
 import profilePicture from "../assets/udit_dp_june_2021.png";
+import conduitgif from "../assets/conduit.gif";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+
 // import GitHubButton from "react-github-btn";
 
 function Home() {
@@ -51,9 +54,46 @@ function Home() {
         </section>
         {/* ------------------Projects --------------------------------------------------- */}
         <section className="projects mt-20">
-          <h1 className="projects__section_title flex text-white text-4xl font-bold mb-20 items-center ">
+          <h1 className="projects__section_title flex text-white text-4xl font-bold mb-5 items-center ">
             Projects
           </h1>
+          <p className="projects__section_description text-xl text-muli text-teaser ">
+            I have built plenty of projects and Web Apps like Bots, Blogging
+            Application etc. maninly with JavaScript Here are some of them.
+          </p>
+          <div className="projects__container flex flex-col	">
+            <div className="projects__container_1 project__card mt-5">
+              <h1 className="text-white text-4xl">
+                Coduit a social blogging site
+              </h1>
+              <p className="text-teaser text-muli text-xl">
+                "Conduit" is a social blogging site (i.e. a Medium.com clone).
+                It uses a custom API for all requests, including authentication.
+              </p>
+              <div>
+                <ul>
+                  <li className="techstack_shine ">
+                    React Redux Styled-components
+                  </li>
+                </ul>
+              </div>
+              <div className="project__card-btns mt-4">
+                <Link href="https://github.com/Udit-takkar/Blogging-App">
+                  <a className=" project__card-btn hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                    <FontAwesomeIcon icon={faGithub} /> Github
+                  </a>
+                </Link>
+                <Link href="https://conduit-l2jvca9fh-udit-takkar.vercel.app/">
+                  <a className=" project__card-btn ml-4 hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                    <FontAwesomeIcon icon={faLink} /> Demo
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <div className="projects__container_2 project__card"></div>
+            <div className="projects__container_3 project__card"></div>
+            <div className="projects__container_4 project__card"></div>
+          </div>
         </section>
         {/* --------------------------ABout Me ------------------------------------------- */}
         <section className="About_Me mt-20">
@@ -68,9 +108,9 @@ function Home() {
               alt="profile-pic"
             />
             <div className="About_Me__content-text ml-8 text-teaser text-muli text-xl text-base">
-              Hello! I'm Udit Takkar, a Web Developer based in New delhi, India
-              with a love and passion for building products using the latest web
-              technologies.
+              Hello! I'm Udit Takkar, a Self-taught Web Developer based in New
+              delhi, India with a love and passion for building products using
+              the latest web technologies.
               <br />
               <br />I am currently pursuing B.Tech in CSE from Maharaja Agrasen
               institute of Technology(MAIT) '23.
@@ -89,7 +129,7 @@ function Home() {
           </div>
         </section>
         {/* --------------------------Contact Section ------------------------------------------- */}
-        <section className="Contact mt-20">
+        <section className="Contact mt-20 mb-20">
           <h1 className="projects__section_title whitespace-nowrap flex text-white text-4xl font-bold mb-5 items-center ">
             Get in Touch
           </h1>

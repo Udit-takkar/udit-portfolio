@@ -107,6 +107,31 @@ a {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-
   object-fit: cover;
+}
+
+.project__card {
+  background: linear-gradient(340deg, #2e3360 0%, #1f2347 100%);
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-image: initial;
+  border-color: #282e5e;
+  box-sizing: border-box;
+  box-shadow: rgb(0 0 0 / 12%) 0.3125rem 0.3125rem 0.9375rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.techstack_shine {
+  /* cursor: help; */
+  color: #ffcc68;
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    rgb(0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
+  -webkit-mask-size: 200%;
+  animation: 3s linear 0s infinite normal none running,
+    3s ease 0s infinite normal none running;
 }
