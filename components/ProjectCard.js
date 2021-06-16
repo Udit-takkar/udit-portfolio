@@ -1,0 +1,55 @@
+import axios from "axios";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedin,
+  faTwitter,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "tailwindcss/tailwind.css";
+import conduit from "../assets/conduit.gif";
+
+export default function ProjectCard({
+  title,
+  gif,
+  description,
+  techstack,
+  github,
+  demo,
+}) {
+  return (
+    <>
+      <p className="hero_intro text-tiny text-intro mt-10">{title}</p>
+      <h1 className="text-white text-3xl mb-5">{title}</h1>
+      <div className=" project__card ">
+        <img src={gif} alt="project" />
+        <p className="text-teaser text-muli text-base">{description}</p>
+
+        <div className="project__card-btns mt-4">
+          <Link href={github.link}>
+            <a className=" project__card-btn hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <FontAwesomeIcon icon={faGithub} /> Github
+            </a>
+          </Link>
+          <Link href={demo.link}>
+            <a className=" project__card-btn ml-4 hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <FontAwesomeIcon icon={faLink} /> Demo
+            </a>
+          </Link>
+        </div>
+      </div>
+      <div className="mt-2 ml-5 mb-2">
+        <ul className="flex">
+          {techstack.map((language, index) => {
+            return (
+              <li key={index} className="techstack_shine mr-3 ">
+                {language}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </>
+  );
+}

@@ -8,6 +8,7 @@ module.exports = {
       lg: "1.125rem",
       xl: "1.25rem",
       "2xl": "1.5rem",
+      "3xl": "1.75rem",
       "4xl": "2rem",
       "5xl": "3rem",
       "6xl": "4rem",
@@ -21,7 +22,7 @@ module.exports = {
       teaser: "#ADB2DC",
       accent: "#FFCC68",
       background: "#22264A",
-      cardBorder:"#282E5E"
+      cardBorder: "#282E5E",
     },
     extend: {
       fontFamily: {

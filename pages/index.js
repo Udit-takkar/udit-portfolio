@@ -13,10 +13,11 @@ import Link from "next/link";
 import profilePicture from "../assets/udit_dp_june_2021.png";
 import conduitgif from "../assets/conduit.gif";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-
+import ProjectCard from "../components/ProjectCard";
+import axios from "axios";
 // import GitHubButton from "react-github-btn";
 
-function Home() {
+function Home({ projects }) {
   return (
     <>
       <Navbar />
@@ -62,37 +63,21 @@ function Home() {
             Application etc. maninly with JavaScript Here are some of them.
           </p>
           <div className="projects__container flex flex-col	">
-            <div className="projects__container_1 project__card mt-5">
-              <h1 className="text-white text-4xl">
-                Coduit a social blogging site
-              </h1>
-              <p className="text-teaser text-muli text-xl">
-                "Conduit" is a social blogging site (i.e. a Medium.com clone).
-                It uses a custom API for all requests, including authentication.
-              </p>
-              <div>
-                <ul>
-                  <li className="techstack_shine ">
-                    React Redux Styled-components
-                  </li>
-                </ul>
-              </div>
-              <div className="project__card-btns mt-4">
-                <Link href="https://github.com/Udit-takkar/Blogging-App">
-                  <a className=" project__card-btn hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                    <FontAwesomeIcon icon={faGithub} /> Github
-                  </a>
-                </Link>
-                <Link href="https://conduit-l2jvca9fh-udit-takkar.vercel.app/">
-                  <a className=" project__card-btn ml-4 hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                    <FontAwesomeIcon icon={faLink} /> Demo
-                  </a>
-                </Link>
-              </div>
-            </div>
-            <div className="projects__container_2 project__card"></div>
-            <div className="projects__container_3 project__card"></div>
-            <div className="projects__container_4 project__card"></div>
+            {projects.map(
+              ({ title, gif, description, techstack, github, demo }) => {
+                return (
+                  <ProjectCard
+                    key={title}
+                    title={title}
+                    gif={gif}
+                    description={description}
+                    techstack={techstack}
+                    github={github}
+                    demo={demo}
+                  />
+                );
+              }
+            )}
           </div>
         </section>
         {/* --------------------------ABout Me ------------------------------------------- */}
@@ -103,7 +88,6 @@ function Home() {
           <div className="About_Me__content flex justify-center items-center		">
             <img
               src={profilePicture}
-              inline-block
               className="picture inline-block"
               alt="profile-pic"
             />
@@ -164,3 +148,12 @@ function Home() {
 }
 
 export default Home;
+export async function getStaticProps() {
+  const res = await axios.get("http://localhost:3000/api/projects");
+
+  return {
+    props: {
+      projects: res.data,
+    },
+  };
+}
