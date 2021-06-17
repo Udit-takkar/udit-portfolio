@@ -137,17 +137,17 @@ function Home() {
 
           <div className="contact__social-btns mt-8 flex flex-wrap sm:flex-nowrap sm:flex-row content-center sm:content-start	 flex-col w-full">
             <Link href="https://www.linkedin.com/in/udit-takkar-5457a1187/">
-              <a className="sm:w-1/3 w-1/2 mt-2 sm:mt-0 inline-block  text-center social-btn hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <a className="sm:w-1/3 w-full sm:mt-0 inline-block  text-center social-btn hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                 <FontAwesomeIcon icon={faLinkedin} /> LinkdeIn
               </a>
             </Link>
             <Link href="https://github.com/Udit-takkar">
-              <a className="sm:w-1/3 w-1/2 mt-2 sm:mt-0 social-btn  text-center hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <a className="sm:w-1/3 w-full mt-2 sm:mt-0 social-btn  text-center hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                 <FontAwesomeIcon icon={faGithub} /> Github
               </a>
             </Link>
             <Link href="https://twitter.com/UditCodes">
-              <a className="sm:w-1/3 w-1/2 mt-2 sm:mt-0 social-btn  text-center hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <a className="sm:w-1/3 w-full mt-2 sm:mt-0 social-btn  text-center hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                 <FontAwesomeIcon icon={faTwitter} /> Twitter
               </a>
             </Link>

@@ -68,6 +68,11 @@ a {
 }
 .hero_children {
   max-width: 49rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 10rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero_intro {
   font-family: "Source Code Pro", monospace;
@@ -96,10 +101,6 @@ a {
   color: #ffcc68;
   font-size: 20px;
   position: relative;
-}
-
-.social-btn {
-  margin-left: 2rem;
 }
 
 .picture {
