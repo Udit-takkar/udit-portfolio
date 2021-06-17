@@ -41,14 +41,13 @@ function Home() {
             <br />
           </h1>
           <p className="hero_teaser text-xl text-teaser text-muli">
-            I am a Full Stack Developer, a hobbyist Reader and love building
+            I am a Full Stack Developer, a hobbyist Reader and I love building
             products.
             <br />
             <br />
             I create, design tools and Apps for companies and individuals.
             <br />
-            <br />I write down my learnings in my blog sections so that people
-            can learn from my mistakes.
+            <br />I try to bring ideas to Life with code.
             <br />
           </p>
           <div className="github_btn mt-5">
@@ -69,8 +68,10 @@ function Home() {
             Projects
           </h1>
           <p className="projects__section_description text-xl text-muli text-teaser ">
-            I have built plenty of projects and Web Apps like Bots, Blogging
-            Application etc. maninly with JavaScript Here are some of them.
+            I have built plenty of projects and Web Apps including Bots,
+            Dashboards etc. mainly with JavaScript.
+            <br />
+            <br /> Here are some of them.
           </p>
           <div className="projects__container flex flex-col	">
             {data &&
@@ -135,19 +136,19 @@ function Home() {
             Want me to work on your project or your team ? <br />
           </div>
 
-          <div className="contact__social-btns mt-8 flex flex-wrap sm:flex-nowrap sm:flex-row content-center sm:content-start	 flex-col w-full">
+          <div className="contact__social-btns mt-8 flex mx-auto flex-wrap  sm:flex-nowrap sm:flex-row content-center sm:content-start	 flex-col  w-full sm:max-w-xl	 ">
             <Link href="https://www.linkedin.com/in/udit-takkar-5457a1187/">
               <a className="sm:w-1/3 w-full sm:mt-0 inline-block  text-center social-btn hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                 <FontAwesomeIcon icon={faLinkedin} /> LinkdeIn
               </a>
             </Link>
             <Link href="https://github.com/Udit-takkar">
-              <a className="sm:w-1/3 w-full mt-2 sm:mt-0 social-btn  text-center hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <a className="sm:w-1/3 w-full mt-2 sm:mt-0 social-btn  text-center hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow sm:ml-2">
                 <FontAwesomeIcon icon={faGithub} /> Github
               </a>
             </Link>
             <Link href="https://twitter.com/UditCodes">
-              <a className="sm:w-1/3 w-full mt-2 sm:mt-0 social-btn  text-center hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <a className="sm:w-1/3 w-full mt-2 sm:mt-0 social-btn  text-center hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow sm:ml-2">
                 <FontAwesomeIcon icon={faTwitter} /> Twitter
               </a>
             </Link>
