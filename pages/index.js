@@ -17,10 +17,13 @@ import ProjectCard from "../components/ProjectCard";
 import axios from "axios";
 import dynamic from "next/dynamic";
 const GitHubButton = dynamic(() => import("react-github-btn"), { ssr: false });
+import useSWR from "swr";
+import React from "react";
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
-// import GitHubButton from "react-github-btn";
+function Home() {
+  const { data, error } = useSWR("/api/projects", fetcher);
 
-function Home({ projects }) {
   return (
     <>
       <Head>
@@ -70,21 +73,22 @@ function Home({ projects }) {
             Application etc. maninly with JavaScript Here are some of them.
           </p>
           <div className="projects__container flex flex-col	">
-            {projects.map(
-              ({ title, gif, description, techstack, github, demo }) => {
-                return (
-                  <ProjectCard
-                    key={title}
-                    title={title}
-                    gif={gif}
-                    description={description}
-                    techstack={techstack}
-                    github={github}
-                    demo={demo}
-                  />
-                );
-              }
-            )}
+            {data &&
+              data.map(
+                ({ title, gif, description, techstack, github, demo }) => {
+                  return (
+                    <ProjectCard
+                      key={title}
+                      title={title}
+                      gif={gif}
+                      description={description}
+                      techstack={techstack}
+                      github={github}
+                      demo={demo}
+                    />
+                  );
+                }
+              )}
           </div>
         </section>
         {/* --------------------------ABout Me ------------------------------------------- */}
@@ -161,12 +165,3 @@ function Home({ projects }) {
 }
 
 export default Home;
-export async function getStaticProps() {
-  const res = await axios.get("http://localhost:3000/api/projects");
-
-  return {
-    props: {
-      projects: res.data,
-    },
-  };
-}
