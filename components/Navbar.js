@@ -21,7 +21,7 @@ export const Navbar = () => {
         </Link>
         <button
           onClick={handleClick}
-          className=" inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-accent outline-none"
+          className=" inline-flex p-3 hover:text-accent rounded lg:hidden text-white ml-auto hover:text-accent outline-none"
         >
           <svg
             className="w-6 h-6"
@@ -43,24 +43,24 @@ export const Navbar = () => {
             active ? "" : "hidden"
           }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
         >
-          <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
+          <div className="bg-background bg-opacity-25	 lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto bg-text-background">
             <Link href="/">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-accent hover:text-white ">
                 Home
               </a>
             </Link>
-            <Link href="/">
+            <Link href="#projects">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-accent hover:text-white">
                 Projects
               </a>
             </Link>
-            <Link href="/">
+            <Link href="#about">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-accent hover:text-white">
                 About me
               </a>
             </Link>
-            <Link href="/">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-accent hover:text-white">
+            <Link href="#contact">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 mr-5 rounded text-white font-bold items-center justify-center hover:text-accent hover:text-white">
                 Contact me
               </a>
             </Link>

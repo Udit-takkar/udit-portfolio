@@ -15,11 +15,18 @@ import conduitgif from "../assets/conduit.gif";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import ProjectCard from "../components/ProjectCard";
 import axios from "axios";
+import dynamic from "next/dynamic";
+const GitHubButton = dynamic(() => import("react-github-btn"), { ssr: false });
+
 // import GitHubButton from "react-github-btn";
 
 function Home({ projects }) {
   return (
     <>
+      <Head>
+        <title>Udit Takkar</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Navbar />
       <Hero>
         <section>
@@ -41,20 +48,20 @@ function Home({ projects }) {
             can learn from my mistakes.
             <br />
           </p>
-          {/* <div className="github_btn mt-5">
-          <GitHubButton
-            href="https://github.com/Udit-takkar"
-            data-color-scheme="no-preference: dark; light: light; dark: light;"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Follow @Udit-takkar on GitHub"
-          >
-            Follow @Udit-takkar
-          </GitHubButton>
-        </div> */}
+          <div className="github_btn mt-5">
+            <GitHubButton
+              href="https://github.com/Udit-takkar"
+              data-color-scheme="no-preference: dark; light: light; dark: light;"
+              data-size="large"
+              data-show-count="true"
+              aria-label="Follow @Udit-takkar on GitHub"
+            >
+              Follow @Udit-takkar
+            </GitHubButton>
+          </div>
         </section>
         {/* ------------------Projects --------------------------------------------------- */}
-        <section className="projects mt-20">
+        <section id="projects" className="projects mt-20">
           <h1 className="projects__section_title flex text-white text-4xl font-bold mb-5 items-center ">
             Projects
           </h1>
@@ -81,11 +88,11 @@ function Home({ projects }) {
           </div>
         </section>
         {/* --------------------------ABout Me ------------------------------------------- */}
-        <section className="About_Me mt-20">
+        <section id="about" className="About_Me mt-20">
           <h1 className="projects__section_title whitespace-nowrap flex text-white text-4xl font-bold mb-20 items-center ">
             About Me
           </h1>
-          <div className="About_Me__content flex justify-center items-center		">
+          <div className="About_Me__content flex justify-center items-center flex-col md:flex-row		">
             <img
               src={profilePicture}
               className="picture inline-block"
@@ -113,7 +120,7 @@ function Home({ projects }) {
           </div>
         </section>
         {/* --------------------------Contact Section ------------------------------------------- */}
-        <section className="Contact mt-20 mb-20">
+        <section id="contact" className="Contact mt-20 mb-20">
           <h1 className="projects__section_title whitespace-nowrap flex text-white text-4xl font-bold mb-5 items-center ">
             Get in Touch
           </h1>
@@ -124,24 +131,30 @@ function Home({ projects }) {
             Want me to work on your project or your team ? <br />
           </div>
 
-          <div className="contact__social-btns mt-8 flex justify-center w-full">
+          <div className="contact__social-btns mt-8 flex flex-wrap sm:flex-nowrap sm:flex-row content-center sm:content-start	 flex-col w-full">
             <Link href="https://www.linkedin.com/in/udit-takkar-5457a1187/">
-              <a className=" social-btn hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <a className="sm:w-1/3 w-1/2 mt-2 sm:mt-0 inline-block  text-center social-btn hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                 <FontAwesomeIcon icon={faLinkedin} /> LinkdeIn
               </a>
             </Link>
             <Link href="https://github.com/Udit-takkar">
-              <a className=" social-btn hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <a className="sm:w-1/3 w-1/2 mt-2 sm:mt-0 social-btn  text-center hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                 <FontAwesomeIcon icon={faGithub} /> Github
               </a>
             </Link>
             <Link href="https://twitter.com/UditCodes">
-              <a className=" social-btn hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <a className="sm:w-1/3 w-1/2 mt-2 sm:mt-0 social-btn  text-center hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                 <FontAwesomeIcon icon={faTwitter} /> Twitter
               </a>
             </Link>
           </div>
         </section>
+        {/* -------------------------Footer-------------------------------------- */}
+        <footer>
+          <p className="text-white text-tiny text-center mb-10 hero_intro text-intro">
+            Made with Nextjs & Tailwindcss By Udit
+          </p>
+        </footer>
       </Hero>
     </>
   );

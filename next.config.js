@@ -10,4 +10,5 @@ const withImages = require("next-images");
 //     return config;
 //   },
 // };
+
 module.exports = withImages();

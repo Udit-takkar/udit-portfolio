@@ -15,7 +15,9 @@ module.exports = {
       "7xl": "5rem",
       title: "4.375rem",
     },
-
+    colors: {
+      background: "#22264A",
+    },
     textColor: (theme) => theme("colors"),
     textColor: {
       intro: "#FFCC68",
