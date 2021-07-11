@@ -11,7 +11,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="font-muli absolute w-full flex items-center flex-wrap bg-transparent z-10 p-5 ">
+      <nav className="absolute w-full flex items-center flex-wrap bg-transparent z-10 p-5 ">
         <Link href="/">
           <a className="inline-flex items-center p-2 mr-4 ">
             <span className="text-xl text-teaser font-bold  tracking-wide">

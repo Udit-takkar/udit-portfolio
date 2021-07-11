@@ -3,13 +3,13 @@ const projects = [
     title: " Coduit - social blogging site",
     gif: "https://i.imgur.com/Cg2oxSF.gif",
     description:
-      "Conduit is a social blogging site (i.e. a Medium.com clone).It uses a custom API for all requests, including authentication.",
-    techstack: ["React", "Redux Toolkit", "Styled - components"],
+      "Conduit is a social blogging site (i.e. like  Medium.com).It is a full stack application with authentication, markdown editor and other features.",
+    techstack: ["MERN Stack", "Redux-tolkit", "Redis"],
     github: {
-      link: "https://github.com/Udit-takkar/Blogging-App",
+      link: "https://github.com/Udit-takkar/Conduit-Blogging-App",
     },
     demo: {
-      link: "https://conduit-l2jvca9fh-udit-takkar.vercel.app/",
+      link: "https://conduit-udit.herokuapp.com/",
     },
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     gif: "https://i.imgur.com/5qfddO8.gif",
     description:
       "It is a time tracking tool inspired by article 100 Blocks a Day by Tim Urban. Your 24 hours is divided into 10 minute blocks and track what you did in that block of time.",
-    techstack: ["React", "Redux", "Material UI"],
+    techstack: ["React", "Redux", "Material UI", "Firebase"],
     github: {
       link: "https://github.com/Udit-takkar/productivity-app",
     },

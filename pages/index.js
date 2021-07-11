@@ -92,7 +92,7 @@ function Home() {
               )}
           </div>
         </section>
-        {/* --------------------------ABout Me ------------------------------------------- */}
+        {/* --------------------------About Me ------------------------------------------- */}
         <section id="about" className="About_Me mt-20">
           <h1 className="projects__section_title whitespace-nowrap flex text-white text-4xl font-bold mb-20 items-center ">
             About Me
