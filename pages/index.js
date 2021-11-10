@@ -116,10 +116,12 @@ function Home() {
               <ul className="grid grid-cols-2">
                 <li>HTML & CSS</li>
                 <li>JavaScript</li>
-                <li>React.js & Redux</li>
+                <li>React & Redux</li>
                 <li>MongoDB & Mongoose</li>
-                <li>Node.js</li>
+                <li>Node</li>
                 <li>Express</li>
+                <li>GraphQL</li>
+                <li>Git</li>
               </ul>
             </div>
           </div>

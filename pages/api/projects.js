@@ -1,5 +1,18 @@
 const projects = [
   {
+    title: "Box-Chat - Explore Chat Rooms",
+    gif: "https://i.imgur.com/myNAEmP.gif",
+    description:
+      "Box-Chat is a realtime group chat application leveraging graphql subscriptions and serverless functions",
+    techstack: ["React", "Hasura", "Typescript", "Auth0"],
+    github: {
+      link: "https://github.com/Udit-takkar/Box-Chat",
+    },
+    demo: {
+      link: "https://box-chat.vercel.app/",
+    },
+  },
+  {
     title: " Coduit - social blogging site",
     gif: "https://i.imgur.com/Cg2oxSF.gif",
     description:
