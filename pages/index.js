@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { ReactElement } from "react";
 import {
   faLinkedin,
   faTwitter,
@@ -11,18 +10,13 @@ import { Navbar } from "../components/Navbar";
 import Hero from "../containers/Hero";
 import Link from "next/link";
 import profilePicture from "../assets/udit_dp_june_2021.png";
-import conduitgif from "../assets/conduit.gif";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
 import ProjectCard from "../components/ProjectCard";
-import axios from "axios";
 import dynamic from "next/dynamic";
 const GitHubButton = dynamic(() => import("react-github-btn"), { ssr: false });
-import useSWR from "swr";
 import React from "react";
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
-function Home() {
-  const { data, error } = useSWR("/api/projects", fetcher);
+function Home(props) {
+  const { data } = props;
 
   return (
     <>
@@ -195,6 +189,16 @@ function Home() {
       </Hero>
     </>
   );
+}
+export async function getStaticProps() {
+  const res = await fetch("https://udit-takkar.vercel.app/api/projects");
+  const data = await res.json();
+
+  return {
+    props: {
+      data,
+    },
+  };
 }
 
 export default Home;
