@@ -92,15 +92,45 @@ function Home() {
               )}
           </div>
         </section>
+        {/* --------------------------Hackathon  ------------------------------------------- */}
+        <section id="hackathons" className="Hackathons mt-20">
+          <h1 className="projects__section_title whitespace-nowrap flex text-white text-4xl font-bold mb-5 items-center ">
+            Hackathons
+          </h1>
+          <ul class="list-outside list-disc ml-6">
+            <li class="text-red-500 mb-5">
+              <span class="text-black text-teaser text-muli text-xl text-base">
+                Won <span class="text-bold">First Position</span> at CIS
+                Hackathon organised by incubateIND and Github 2021.
+              </span>
+            </li>
+            <li class="text-red-500 mb-5">
+              <span class="text-black text-teaser text-muli text-xl text-base">
+                My team was amongst <span class="text-bold">Top 6</span> teams
+                from the total of
+                <span class="text-bold"> 1878 registered teams</span> in
+                e-Yantra Fighting COVID-19 Hackathon orgainsed by IIT-Bombay
+                2021.
+              </span>
+            </li>
+            <li class="text-red-500">
+              <span class="text-black text-teaser text-muli text-xl text-base">
+                Awarded <span class="text-bold">Special Mention</span> in IGDTUW
+                Hackathon 2020
+              </span>
+            </li>
+          </ul>
+        </section>
+
         {/* --------------------------About Me ------------------------------------------- */}
         <section id="about" className="About_Me mt-20">
-          <h1 className="projects__section_title whitespace-nowrap flex text-white text-4xl font-bold mb-20 items-center ">
+          <h1 className="projects__section_title whitespace-nowrap flex text-white text-4xl font-bold sm:mb-20 mb-5 items-center ">
             About Me
           </h1>
           <div className="About_Me__content flex justify-center items-center flex-col md:flex-row		">
             <img
               src={profilePicture}
-              className="picture inline-block"
+              className="picture inline-block sm:mb-0 mb-10"
               alt="profile-pic"
             />
             <div className="About_Me__content-text ml-8 text-teaser text-muli text-xl text-base">
@@ -131,14 +161,14 @@ function Home() {
           <h1 className="projects__section_title whitespace-nowrap flex text-white text-4xl font-bold mb-5 items-center ">
             Get in Touch
           </h1>
-          <div className="contact__content flex w-full justify-center	text-teaser text-xl text-muli">
+          <div className="contact__content flex w-full sm:ml-10 ml-0	text-teaser text-xl text-muli">
             My inbox is always open whether it's for a potential client,
             <br />
             a recruiter or to simply drop for a chat <br />
             Want me to work on your project or your team ? <br />
           </div>
 
-          <div className="contact__social-btns mt-8 flex mx-auto flex-wrap  sm:flex-nowrap sm:flex-row content-center sm:content-start	 flex-col  w-full sm:max-w-xl	 ">
+          <div className="contact__social-btns mt-8 flex sm:ml-10 justify-center  flex-wrap  sm:flex-nowrap sm:flex-row content-center sm:content-start	 flex-col  w-full sm:max-w-xl	 ">
             <Link href="https://www.linkedin.com/in/udit-takkar-5457a1187/">
               <a className="sm:w-1/3 w-full sm:mt-0 inline-block  text-center social-btn hover:border-gray-700  text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                 <FontAwesomeIcon icon={faLinkedin} /> LinkdeIn

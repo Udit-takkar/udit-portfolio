@@ -17,7 +17,7 @@ const projects = [
     gif: "https://i.imgur.com/Cg2oxSF.gif",
     description:
       "Conduit is a social blogging site (i.e. like  Medium.com).It is a full stack application with authentication, markdown editor and other features.",
-    techstack: ["MERN Stack", "Redux-tolkit", "Redis"],
+    techstack: ["MERN Stack", "Redux-toolkit", "Redis"],
     github: {
       link: "https://github.com/Udit-takkar/Conduit-Blogging-App",
     },
