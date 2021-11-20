@@ -91,26 +91,26 @@ function Home(props) {
           <h1 className="projects__section_title whitespace-nowrap flex text-white text-4xl font-bold mb-5 items-center ">
             Hackathons
           </h1>
-          <ul class="list-outside list-disc ml-6">
-            <li class="text-red-500 mb-5">
-              <span class="text-black text-teaser text-muli text-xl text-base">
-                Won <span class="text-bold">First Position</span> at CIS
+          <ul className="list-outside list-disc ml-6">
+            <li className="text-red-500 mb-5">
+              <span className="text-black text-teaser text-muli text-xl text-base">
+                Won <span className="text-bold">First Position</span> at CIS
                 Hackathon organised by incubateIND and Github 2021.
               </span>
             </li>
-            <li class="text-red-500 mb-5">
-              <span class="text-black text-teaser text-muli text-xl text-base">
-                My team was amongst <span class="text-bold">Top 6</span> teams
-                from the total of
-                <span class="text-bold"> 1878 registered teams</span> in
+            <li className="text-red-500 mb-5">
+              <span className="text-black text-teaser text-muli text-xl text-base">
+                My team was amongst <span className="text-bold">Top 6</span>{" "}
+                teams from the total of
+                <span className="text-bold"> 1878 registered teams</span> in
                 e-Yantra Fighting COVID-19 Hackathon orgainsed by IIT-Bombay
                 2021.
               </span>
             </li>
-            <li class="text-red-500">
-              <span class="text-black text-teaser text-muli text-xl text-base">
-                Awarded <span class="text-bold">Special Mention</span> in IGDTUW
-                Hackathon 2020
+            <li className="text-red-500">
+              <span className="text-black text-teaser text-muli text-xl text-base">
+                Awarded <span className="text-bold">Special Mention</span> in
+                IGDTUW Hackathon 2020
               </span>
             </li>
           </ul>
@@ -191,12 +191,15 @@ function Home(props) {
   );
 }
 export async function getStaticProps() {
-  const res = await fetch("https://udit-takkar.vercel.app/api/projects");
+  // const res = await fetch("https://udit-takkar.vercel.app/api/projects");
+  const res = await fetch("http://localhost:3000/api/projects");
+
   const data = await res.json();
 
   return {
     props: {
       data,
+      revalidate: 60,
     },
   };
 }
