@@ -70,12 +70,12 @@ function Home(props) {
           <div className="projects__container flex flex-col	">
             {data &&
               data.map(
-                ({ title, gif, description, techstack, github, demo }) => {
+                ({ title, video, description, techstack, github, demo }) => {
                   return (
                     <ProjectCard
                       key={title}
                       title={title}
-                      gif={gif}
+                      videoURL={video}
                       description={description}
                       techstack={techstack}
                       github={github}
@@ -93,13 +93,26 @@ function Home(props) {
           </h1>
           <ul className="list-outside list-disc ml-6">
             <li className="text-red-500 mb-5">
-              <span className="text-black text-teaser text-muli text-xl text-base">
-                Won <span className="text-bold">First Position</span> at CIS
-                Hackathon organised by incubateIND and Github 2021.
+              <span className="text-black text-teaser text-muli  text-xl">
+                Won prize in two tracks
+                <span> </span>
+                <span className="text-bold">Moralis and Filecoin</span>
+                <span> </span>
+                at India's biggest Web3 Hackathon BUIDL IT Hackathon 2021 by
+                Polygon among
+                <span className="text-bold"> 5000+</span> registered
+                participants.
               </span>
             </li>
             <li className="text-red-500 mb-5">
-              <span className="text-black text-teaser text-muli text-xl text-base">
+              <span className="text-black text-teaser text-muli  text-xl">
+                Won <span className="text-bold">First Position</span> at CIS
+                Hackathon organised by incubateIND and Github 2021 from total of{" "}
+                <span className="text-bold"> 75+</span> registered teams.
+              </span>
+            </li>
+            <li className="text-red-500 mb-5">
+              <span className="text-black text-teaser text-muli  text-xl">
                 My team was amongst <span className="text-bold">Top 6</span>{" "}
                 teams from the total of
                 <span className="text-bold"> 1878 registered teams</span> in
@@ -108,7 +121,7 @@ function Home(props) {
               </span>
             </li>
             <li className="text-red-500">
-              <span className="text-black text-teaser text-muli text-xl text-base">
+              <span className="text-black text-teaser text-muli  text-xl">
                 Awarded <span className="text-bold">Special Mention</span> in
                 IGDTUW Hackathon 2020
               </span>
@@ -191,8 +204,8 @@ function Home(props) {
   );
 }
 export async function getStaticProps() {
-  // const res = await fetch("https://udit-takkar.vercel.app/api/projects");
-  const res = await fetch("http://localhost:3000/api/projects");
+  const res = await fetch("https://udit-takkar.vercel.app/api/projects");
+  // const res = await fetch("http://localhost:3000/api/projects");
 
   const data = await res.json();
 

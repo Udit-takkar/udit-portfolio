@@ -12,7 +12,7 @@ import conduit from "../assets/conduit.gif";
 
 export default function ProjectCard({
   title,
-  gif,
+  videoURL,
   description,
   techstack,
   github,
@@ -23,7 +23,7 @@ export default function ProjectCard({
       <p className="hero_intro text-tiny text-intro mt-10">{title}</p>
       <h1 className="text-white text-3xl mb-5">{title}</h1>
       <div className=" project__card ">
-        <img src={gif} alt="project" />
+        <video loop muted autoPlay src={videoURL} />
         <p className="text-teaser text-muli text-base mt-4">{description}</p>
         <div className="project__card-btns flex flex-wrap sm:flex-nowrap justify-center mt-4">
           <Link href={github.link}>
