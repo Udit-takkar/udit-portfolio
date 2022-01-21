@@ -23,7 +23,10 @@ export default function ProjectCard({
       <p className="hero_intro text-tiny text-intro mt-10">{title}</p>
       <h1 className="text-white text-3xl mb-5">{title}</h1>
       <div className=" project__card ">
-        <video loop muted autoPlay src={videoURL} />
+        {/* <video loop muted autoPlay src={videoURL} /> */}
+        <video loop muted autoPlay>
+          <source src={videoURL} type="video/webm" />
+        </video>
         <p className="text-teaser text-muli text-base mt-4">{description}</p>
         <div className="project__card-btns flex flex-wrap sm:flex-nowrap justify-center mt-4">
           <Link href={github.link}>
