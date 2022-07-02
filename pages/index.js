@@ -13,10 +13,26 @@ import profilePicture from "../assets/udit_dp_june_2021.png";
 import ProjectCard from "../components/ProjectCard";
 import dynamic from "next/dynamic";
 const GitHubButton = dynamic(() => import("react-github-btn"), { ssr: false });
-import React from "react";
+import React, { useEffect } from "react";
 
 function Home(props) {
   const { data } = props;
+
+  useEffect(() => {
+    if (document) {
+      console.log("Hi");
+
+      (function (d, t) {
+        var pp = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        pp.src =
+          "https://app.pageproofer.com/embed/e16642dc-4a3b-5cad-90be-70b6879c43bd";
+        pp.type = "text/javascript";
+        pp.async = true;
+        s.parentNode.insertBefore(pp, s);
+      })(document, "script");
+    }
+  }, []);
 
   return (
     <>
